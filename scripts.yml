@@ -1,0 +1,4 @@
+scripts:
+  build: deno cache --reload --config ./tsconfig.json ./mod.ts
+  test: deno test
+  bench: deno run --allow-hrtime ./benchmarks.ts
