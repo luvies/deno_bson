@@ -41,4 +41,9 @@ bench({
   },
 });
 
-runBenchmarks();
+const results = await runBenchmarks();
+for (const result of results.results) {
+  console.log(
+    `${result.name} - ${(1000 / result.measuredRunsAvgMs).toFixed(2)}`,
+  );
+}
